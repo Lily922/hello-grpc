@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloserver
+  namespace: default
+spec:
+  containers:
+  - name: helloserver
+    image: lily123/helloserver:latest
+    ports:
+    - containerPort: 10000
+  restartPolicy: Never

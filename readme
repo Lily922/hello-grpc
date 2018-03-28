@@ -1,0 +1,3 @@
+server client hello 的开发
+将 server 端运行至 kubernetes pod 里面，client 运行在集群外部
+通信方式采用 grpc
