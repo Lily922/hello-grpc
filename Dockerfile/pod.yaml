@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   name: helloserver
   namespace: default
+  labels:
+    app: hello
+    name: helloserver
 spec:
   containers:
   - name: helloserver

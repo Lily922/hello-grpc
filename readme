@@ -1,3 +1,8 @@
-server client hello 的开发
-将 server 端运行至 kubernetes pod 里面，client 运行在集群外部
-通信方式采用 grpc
+本项目用于测试 kubenetes 的 tunnel
+server 运行在pod中，通过Dockerfile下的Dockerfile创建镜像，通过pod.yaml创建pod
+server 端口默认使用 10000，并且一直开启grpc请求监听。
+server 的tag默认以 "app": "hello", "name": "helloserver"识别
+client 运行在集群外部，与pod中的server通过tunnel和grpc通信，每次请求在得到server的hello招呼后
+断开连接
+portforwarder 从 helm项目中迁移过来的
+client执行./hello-client --config-addr=/root/.kube/config即可
