@@ -1,5 +1,5 @@
 syntax="proto3";
-package hello;
+package proto;
 service Greeter{
 	rpc SayHello(Request)returns (Response);
 	

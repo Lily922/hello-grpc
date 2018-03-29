@@ -6,3 +6,5 @@ client 运行在集群外部，与pod中的server通过tunnel和grpc通信，每
 断开连接
 portforwarder 从 helm项目中迁移过来的
 client执行./hello-client --config-addr=/root/.kube/config即可
+主要原理是：
+   kubectl port-forward命令转发了本地端口到pod端口的连接。将给pod的流量转发到本地的某个端口。
